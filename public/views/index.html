@@ -14,7 +14,7 @@
   <script src="scripts/app.js"></script>
   <title>CookHub</title>
 </head>
-<body>
+<body ng-controller"MainController">
 
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -32,12 +32,26 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><button type="button" class="btn btn-success">Create an account</button></a></li>
-          <li><a href="#"><button type="button" class="btn btn-success">Sign in</button></a></li>
+          <li><a href="#/signup"><button type="button" class="btn btn-success">Create an account</button></a></li>
+          <li><a href="#/login"><button type="button" class="btn btn-success">Sign in</button></a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="jumbotron">
+        <h1>Discover the world's trending recipes</h1>
+        <div class="form-group">
+          <input type="text" class="form-control" />
+        </div>
+        <a href="#/recipes" class="btn btn-primary">Get Recipes</a>
+
+        
+      </div>
+    </div>
+  </div>
 
 
 </body>
