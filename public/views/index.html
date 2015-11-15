@@ -14,7 +14,7 @@
   <script src="scripts/app.js"></script>
   <title>CookHub</title>
 </head>
-<body ng-controller"MainController">
+<body ng-controller="MainController">
 
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -43,15 +43,24 @@
     <div class="row">
       <div class="jumbotron">
         <h1>Discover the world's trending recipes</h1>
-        <div class="form-group">
-          <input type="text" ng-model="recipes" class="form-control" />
-        </div>
-        <a href="#/recipes" class="btn btn-primary">Get Recipes</a>
+
+        <form ng-submit="submit()">
+          <div class="form-group">
+            <input type="text" ng-model="recipeTag" class="form-control" />
+            <input type="submit" class="btn btn-primary" value="Find Recipes" />
+          </div>
+        </form>
+
       </div>
     </div>
   </div>
 
-{{ recipes }}
+{{ recipeTag }}
+{{ recipeResults }}
+
+<!-- <div ng-repeat="recipe in recipeResults"></div> -->
+
+
 
 </body>
 </html>

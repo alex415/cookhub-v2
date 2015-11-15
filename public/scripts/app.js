@@ -8,31 +8,32 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
     .when('/', {
       templateUrl: 'views/index.html',
       controller: 'MainController'
-      
-});
-
-// SERVICES
-app.service('recipeService', function() {
-
-  
-
-});
-
-// CONTROLLERS
-app.controller('MainController', ['$scope', '$resource', 'recipeService', function ($scope, $resource, recipeService) {
-
-    $scope.recipes = recipeService.recipes;
-
-    $scope.$watch('recipes', function() {
-      recipeService.recipes = $scope.recipes;
     });
-
-    $scope.recipeAPI = $resource("/api", { save: {method: 'POST'}, params: {tag: recipe} });
-
-    $scope.recipeResult = $scope.recipeAPI.post({ q: $scope.recipes, });
 
 }]);
 
+// SERVICES
 
+app.factory('searchFactory', ['$http', function ($http) {
+    var obj = {};
 
-}]); // end
+    obj.fetchRecipes = function () {
+      return $http.post("/api", { tag: "chicken" });
+    };
+
+    return obj;
+
+}]);
+
+// CONTROLLERS
+app.controller('MainController', ['$scope', 'searchFactory', function ($scope, searchFactory) {
+
+    $scope.submit = function () {
+
+      searchFactory.fetchRecipes()
+        .success(function(response) {
+          $scope.recipeResults = response;
+      });
+    };
+
+}]);
