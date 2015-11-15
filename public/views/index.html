@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="recipeApp" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,15 +44,14 @@
       <div class="jumbotron">
         <h1>Discover the world's trending recipes</h1>
         <div class="form-group">
-          <input type="text" class="form-control" />
+          <input type="text" ng-model="recipes" class="form-control" />
         </div>
         <a href="#/recipes" class="btn btn-primary">Get Recipes</a>
-
-        
       </div>
     </div>
   </div>
 
+{{ recipes }}
 
 </body>
 </html>
