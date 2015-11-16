@@ -1,6 +1,5 @@
 var app = angular.module('recipeApp', ['ngRoute']);
 
-
 // ROUTES
 app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
 
@@ -13,27 +12,25 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
 }]);
 
 // SERVICES
-
-app.factory('searchFactory', ['$http', function ($http) {
-    var obj = {};
-
-    obj.fetchRecipes = function () {
-      return $http.post("/api", { tag: "chicken" });
-    };
-
-    return obj;
-
+app.factory('searchFactory', ['$http', function($http) {
+    return $http.post("/api", { tag: "chicken" });
 }]);
+
 
 // CONTROLLERS
 app.controller('MainController', ['$scope', 'searchFactory', function ($scope, searchFactory) {
 
     $scope.submit = function () {
 
-      searchFactory.fetchRecipes()
-        .success(function(response) {
-          $scope.recipeResults = response;
+      searchFactory.then(function(response) {
+        $scope.recipeData = JSON.parse(response.data);
       });
+
     };
 
 }]);
+
+
+
+
+
