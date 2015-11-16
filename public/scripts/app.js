@@ -16,6 +16,14 @@ app.factory('searchFactory', ['$http', function($http) {
     return $http.post("/api", { tag: "chicken" });
 }]);
 
+// app.factory('searchFactory', ['$http', function($http) {
+//     var factory = {
+//         post: function(customTag) {
+//             return $http.post("/api", { tag: customTag });
+//         }
+//     };
+//     return searchFactory;
+// }]);
 
 // CONTROLLERS
 app.controller('MainController', ['$scope', 'searchFactory', function ($scope, searchFactory) {
@@ -25,12 +33,6 @@ app.controller('MainController', ['$scope', 'searchFactory', function ($scope, s
       searchFactory.then(function(response) {
         $scope.recipeData = JSON.parse(response.data);
       });
-
     };
 
 }]);
-
-
-
-
-
