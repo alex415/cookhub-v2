@@ -11,8 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.min.js"></script>
-  <script src="scripts/masonry.pkgd.js"></script>
-  <script src="  https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
   <script src="scripts/script.js"></script>
   <script src="scripts/app.js"></script>
   <title>CookHub</title>
@@ -58,27 +57,11 @@
 
 
 
-
-<!-- <div ng-repeat="recipe in recipeData.recipes">
-  <div id="container">
-    <div class="col-md-4">
-      <div class="image-container">
-        <img ng-src="{{recipe.image_url}}" class="item img-responsive">
-      <div class="text-container">
-        <p>{{recipe.title}}</p>
-        <a href="{{recipe.source_url}}" target="_blank">View Recipe</a>
-      </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- <div id="container"> -->
-  <div class="container">
-    <div class="row">
+<!--   <div class="container sm-margin">
+    <div class="row sm-margin">
       <div ng-repeat="recipe in recipeData.recipes">
-        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 small-gutter">
-          <div class="main-container">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 sm-padding">
+          <div class="content-container">
             <img ng-src="{{recipe.image_url}}" class="recipe-image img-responsive">
             <div class="recipe-info">
               <h4>{{recipe.title}}</h4>
@@ -88,9 +71,24 @@
         </div>
       </div>
     </div>
-  </div>
-<!-- </div> -->
+  </div> -->
 
+  <div class="container sm-margin">
+    <div class="row sm-margin">
+      <div ng-repeat="recipe in recipeData.recipes">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 sm-padding">
+          <div class="content-container">
+            <img ng-src="{{recipe.image_url}}" class="recipe-image img-responsive">
+            <div class="recipe-info">
+              <h4>{{recipe.title}}</h4>
+              <h4><a href="{{recipe.publisher_url}}" target="_blank">{{recipe.publisher}}</a></h4>
+              <a href="{{recipe.source_url}}" target="_blank">View Recipe</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 </body>

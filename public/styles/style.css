@@ -4,28 +4,35 @@
   box-sizing: border-box;
 }
 
-.small-gutter {
-  padding: 5px;
+.sm-padding {
+  padding: 6px;
+}
+
+.sm-margin {
+  margin: 6px auto;
+  padding: 0;
 }
 
 .navbar-brand {
   line-height: 30px;
 }
 
-.main-container {
+.content-container {
   padding: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   border: 1px solid #DDD;
 }
 
 .recipe-image {
-  width:100%;
+  width: 100%;
 }
 
-
-
-
-
+@media (max-width: 978px) {
+  .container {
+    margin: 6px auto;
+    padding: 0;
+  }
+}
 
 /*Typography*/
 
