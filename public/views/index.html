@@ -11,8 +11,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
   <script src="scripts/script.js"></script>
+  <script src="scripts/angular-masonry.min.js"></script>
   <script src="scripts/app.js"></script>
   <title>CookHub</title>
 </head>
@@ -34,8 +34,8 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#/signup"><button type="button" class="btn btn-success">Create an account</button></a></li>
-          <li><a href="#/login"><button type="button" class="btn btn-success">Sign in</button></a></li>
+          <li><a href="#/signup"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#signUpModal">Create an account</button></a></li>
+          <li><a href="#/login"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#signInModal">Sign in</button></a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -55,24 +55,6 @@
     </div>
   </div>
 
-
-
-<!--   <div class="container sm-margin">
-    <div class="row sm-margin">
-      <div ng-repeat="recipe in recipeData.recipes">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 sm-padding">
-          <div class="content-container">
-            <img ng-src="{{recipe.image_url}}" class="recipe-image img-responsive">
-            <div class="recipe-info">
-              <h4>{{recipe.title}}</h4>
-              <a href="{{recipe.source_url}}" target="_blank">View Recipe</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
   <div class="container sm-margin">
     <div class="row sm-margin">
       <div ng-repeat="recipe in recipeData.recipes">
@@ -81,7 +63,6 @@
             <img ng-src="{{recipe.image_url}}" class="recipe-image img-responsive">
             <div class="recipe-info">
               <h4>{{recipe.title}}</h4>
-              <h4><a href="{{recipe.publisher_url}}" target="_blank">{{recipe.publisher}}</a></h4>
               <a href="{{recipe.source_url}}" target="_blank">View Recipe</a>
             </div>
           </div>
@@ -89,6 +70,68 @@
       </div>
     </div>
   </div>
+
+  <!-- modal sign up -->
+  <div class="modal fade" id="signUpModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">Sign up</h2>
+        </div>
+        <!-- body -->
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password">
+            </div>
+          </form>
+        </div>
+        <!-- button -->
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-block">Sign up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal sign in -->
+  <div class="modal fade" id="signInModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">Sign in</h2>
+        </div>
+        <!-- body -->
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password">
+            </div>
+          </form>
+        </div>
+        <!-- button -->
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-block">Sign in</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
 
 
 </body>
