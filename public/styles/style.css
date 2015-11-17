@@ -23,9 +23,9 @@
   border: 1px solid #DDD;
 }
 
-.recipe-image {
+/*.recipe-image {
   width: 100%;
-}
+}*/
 
 @media (max-width: 978px) {
   .container {
