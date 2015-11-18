@@ -67,8 +67,12 @@
           <div class="content-container">
             <img ng-src="{{recipe.image_url}}" class="recipe-image img-responsive">
             <div class="recipe-info">
-              <h4>{{recipe.title}}</h4>
-              <a href="{{recipe.source_url}}" target="_blank">View Recipe</a>
+              <div class="title-wrapper">
+                <h4>{{recipe.title}}</h4>
+              </div>
+              <div class="view-recipe-wrapper">
+                <a href="{{recipe.source_url}}" target="_blank">View Recipe</a>
+              </div>
             </div>
           </div>
         </div>
