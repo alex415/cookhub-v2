@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -34,8 +35,13 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
           <li><a href="#/signup"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#signUpModal">Create an account</button></a></li>
           <li><a href="#/login"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#signInModal">Sign in</button></a></li>
+=======
+          <li><a href="#/signup"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#signUpWindow">Create an account</button></a></li>
+          <li><a href="#/login"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#logInWindow">Sign in</button></a></li>
+>>>>>>> new
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -46,9 +52,13 @@
       <div class="jumbotron">
         <h1>Discover the world's trending recipes</h1>
         <form ng-submit="submit()">
-          <div class="form-group">
-            <input type="text" ng-model="recipeTag" class="form-control" />
-            <input type="submit" class="btn btn-primary" value="Find Recipes" />
+          <div class="form-group form-wrapper">
+
+            <div class="search">
+              <span class="fa fa-search"></span>
+              <input type="text" ng-model="recipeTag" class="form-control" placeholder="Search recipes..." />
+            </div>
+
           </div>
         </form>
       </div>
@@ -62,8 +72,12 @@
           <div class="content-container">
             <img ng-src="{{recipe.image_url}}" class="recipe-image img-responsive">
             <div class="recipe-info">
-              <h4>{{recipe.title}}</h4>
-              <a href="{{recipe.source_url}}" target="_blank">View Recipe</a>
+              <div class="title-wrapper">
+                <h4>{{recipe.title}}</h4>
+              </div>
+              <div class="view-recipe-wrapper">
+                <a href="{{recipe.source_url}}" target="_blank">View Recipe</a>
+              </div>
             </div>
           </div>
         </div>
@@ -126,13 +140,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
 
 </body>
 </html>
