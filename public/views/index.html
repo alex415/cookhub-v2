@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -46,9 +47,13 @@
       <div class="jumbotron">
         <h1>Discover the world's trending recipes</h1>
         <form ng-submit="submit()">
-          <div class="form-group">
-            <input type="text" ng-model="recipeTag" class="form-control search-input" placeholder="Search recipes..." />
-            <input type="submit" class="btn btn-primary" value="Find Recipes" />
+          <div class="form-group form-wrapper">
+
+            <div class="search">
+              <span class="fa fa-search"></span>
+              <input type="text" ng-model="recipeTag" class="form-control" placeholder="Search recipes..." />
+            </div>
+
           </div>
         </form>
       </div>
