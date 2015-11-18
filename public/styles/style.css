@@ -13,28 +13,38 @@
   padding: 0;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
+
 .navbar-brand {
   line-height: 30px;
 }
 
 .jumbotron {
-  min-height: 480px;
-  background: url('/images/1920.jpg') no-repeat center center;
+  min-height: 390px;
+  background: url('/images/jumbo.jpg') no-repeat center center;
   background-size: cover;
 }
 
 .jumbotron > h1 {
   color: #FFF;
   font-size: 56px;
-  font-weight: 400;
+  font-weight: 300;
   text-align: center;
   text-shadow: #000 0 0 7px,rgba(0,0,0,0.9) 0 0 20px;
+  padding-top: 60px;
+  padding-bottom: 13px;
+}
+
+.container-fluid .jumbotron {
+  border-radius: 0;
 }
 
 .search {
   position: relative;
   color: #aaa;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .search input { 
@@ -43,12 +53,13 @@
   border: none;
   border-radius: 5px;
   outline: none;
-  font-size: 16px;
+  font-size: 18px;
+  height: 50px;
 }
 
 .search .fa-search { 
   position: absolute;
-  top: 10px;
+  top: 17px;
   left: 10px;
 }
 
