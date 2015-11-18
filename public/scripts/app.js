@@ -13,7 +13,14 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
 
 // SERVICES
 app.factory('searchFactory', ['$http', function($http) {
-    return $http.post("/api", { tag: "chicken" });
+
+    var factory = {
+      post: function(customTag) {
+          return $http.post("/api", { tag: customTag });
+      }
+    };
+    return factory;
+
 }]);
 
 // CONTROLLERS
@@ -21,7 +28,7 @@ app.controller('MainController', ['$scope', 'searchFactory', function ($scope, s
 
     $scope.submit = function () {
 
-      searchFactory.then(function(response) {
+      searchFactory.post($scope.recipeTag).then(function(response) {
         $scope.recipeData = JSON.parse(response.data);
       });
     };
