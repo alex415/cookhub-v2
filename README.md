@@ -2,4 +2,5 @@
 http://cookhub.herokuapp.com/
 
 ## Overview
-A platform to browse socially ranked recipes. Work in progress.
+### Work in progress
+A platform to browse socially ranked recipes.
