@@ -120,6 +120,17 @@ body {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .form-group {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .jumbotron > h1 {
+    padding-top: 0;
+    margin-top: -5px;
+    padding-bottom: 0;
+}
+
 /*Typography*/
 
 html { font: 100%/1.5 Arial, sans-serif; }
