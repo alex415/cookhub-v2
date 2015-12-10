@@ -8,6 +8,11 @@ body {
   background: #e9e9e9;
 }
 
+.container { 
+  width: auto;
+  margin: 1em;
+}
+
 .sm-padding {
   padding: 6px;
 }
@@ -102,8 +107,6 @@ body {
 }
 
 .title-wrapper {
-/*  padding-top: 5px;
-  padding-bottom: 5px;*/
   height: 60px;
 }
 
@@ -114,9 +117,45 @@ body {
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
 }
 
+.modal-content {
+  max-width: 420px;
+}
+
+.modal-footer > .btn.btn-primary.btn-block {
+  max-width: 400px;
+  margin: auto;
+}
+
+.modal.fade .modal-dialog {
+  transform: translate(0, 0%) !important;
+  -ms-transform: translate(0, 0%) !important; 
+  -webkit-transform: translate(0, 0%) !important; 
+}
+
+.vertical-alignment-helper {
+  display:table;
+  height: 100%;
+  width: 100%;
+  pointer-events:none;
+}
+
+.vertical-align-center {
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events:none;
+}
+
+.modal-content {
+  width:inherit;
+  height:inherit;
+  margin: 0 auto;
+  pointer-events: all;
+}
+
 @media screen and (min-width: 481px) and (max-width: 767px) {
   .recipe-image {
     height: 280px;
+    max-width: 370px;
   }
 }
 
@@ -168,8 +207,8 @@ a,
 a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
 
-a:active { color: tomato; }
-a:focus { border: 1px dotted tomato; }
+/*a:active { color: tomato; }
+a:focus { border: 1px dotted tomato; }*/
 
 /*styling various links*/
 /*a[href$=".zip"] { color: tomato; }*/
