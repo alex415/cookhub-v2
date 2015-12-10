@@ -61,22 +61,24 @@
 
   <!-- gallery -->
   <div class="container sm-margin">
-    <div class="row sm-margin">
-      <div ng-repeat="recipe in recipeData.recipes">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 sm-padding">
-          <div class="content-container">
-            <img ng-src="{{recipe.image_url}}" class="recipe-image img-responsive">
-            <div class="recipe-info">
-              <div class="title-wrapper">
-                <h4>{{recipe.title}}</h4>
-              </div>
-              <div class="view-recipe-wrapper">
-                <a href="{{recipe.source_url}}" target="_blank">View Recipe</a>
+    <div class="row-centered">
+      <div class="row sm-margin">
+    </div>
+        <div ng-repeat="recipe in recipeData.recipes">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 sm-padding">
+            <div class="content-container">
+              <img ng-src="{{recipe.image_url}}" class="recipe-image img-responsive">
+              <div class="recipe-info">
+                <div class="title-wrapper">
+                  <h4>{{recipe.title}}</h4>
+                </div>
+                <div class="view-recipe-wrapper">
+                  <a href="{{recipe.source_url}}" target="_blank">View Recipe</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 

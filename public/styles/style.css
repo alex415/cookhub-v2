@@ -9,8 +9,17 @@ body {
 }
 
 .container { 
-  width: auto;
+  width: 0 auto;
   margin: 1em;
+}
+
+.col-lg-3, .col-md-3, .col-sm-3, .col-xs-6 {
+  max-width: 300.5px;
+}
+
+.row-centered { 
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
 .sm-padding {
@@ -154,8 +163,8 @@ body {
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
   .recipe-image {
-    height: 280px;
-    max-width: 370px;
+/*    height: 280px;
+    max-width: 370px;*/
   }
 }
 
